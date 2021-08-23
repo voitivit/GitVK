@@ -547,10 +547,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="Nuk-jW-RfR" customClass="NewsTableViewCell" customModule="Client_VK" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="538.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="563.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nuk-jW-RfR" id="oGS-f4-LWp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="538.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="563.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-6t-fu2" customClass="AvatarsView" customModule="Client_VK" customModuleProvider="target">
@@ -568,29 +568,38 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дата публикации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDx-HH-tdx">
-                                            <rect key="frame" x="80" y="48" width="314" height="15"/>
+                                            <rect key="frame" x="80" y="46.5" width="314" height="16.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3t-mB-0q5">
-                                            <rect key="frame" x="3" y="70" width="408" height="0.5"/>
+                                            <rect key="frame" x="3" y="54.5" width="408" height="0.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="lessThanOrEqual" priority="900" constant="200" id="4d9-ro-Ytj"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="4d9-ro-Ytj"/>
                                             </constraints>
                                             <color key="textColor" systemColor="labelColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-id-CHE">
+                                            <rect key="frame" x="8" y="54.5" width="403" height="30"/>
+                                            <state key="normal" title="Показать полностью...">
+                                                <color key="titleColor" systemColor="linkColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showMore:" destination="Nuk-jW-RfR" eventType="touchUpInside" id="wRN-uE-XdZ"/>
+                                            </connections>
+                                        </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-hg-yfp">
-                                            <rect key="frame" x="3" y="80.5" width="408" height="408"/>
+                                            <rect key="frame" x="3" y="105" width="408" height="408.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Q5v-hg-yfp" secondAttribute="height" multiplier="1:1" id="GYE-J3-he9"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="Q5v-hg-yfp" secondAttribute="height" multiplier="1:1" id="GYE-J3-he9"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1Y-b1-1XL">
-                                            <rect key="frame" x="0.0" y="498.5" width="414" height="30"/>
+                                            <rect key="frame" x="0.0" y="523.5" width="414" height="30"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxq-43-L38" customClass="LikeControl" customModule="Client_VK" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="5" width="40" height="20"/>
@@ -651,37 +660,32 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-id-CHE">
-                                            <rect key="frame" x="8" y="55.5" width="503" height="30"/>
-                                            <state key="normal" title="Показать полностью...">
-                                                <color key="titleColor" systemColor="linkColor"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="showMore:" destination="Nuk-jW-RfR" eventType="touchUpInside" id="wRN-uE-XdZ"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="hDx-HH-tdx" firstAttribute="leading" secondItem="sMe-Kv-Nh9" secondAttribute="leading" id="0hJ-9Y-tVH"/>
                                         <constraint firstItem="sMe-Kv-Nh9" firstAttribute="centerY" secondItem="AS3-6t-fu2" secondAttribute="centerY" id="0qu-ay-iXh"/>
+                                        <constraint firstItem="xUo-id-CHE" firstAttribute="trailing" secondItem="Y3t-mB-0q5" secondAttribute="trailing" id="2f1-Hn-UyD"/>
+                                        <constraint firstItem="Y3t-mB-0q5" firstAttribute="top" secondItem="xUo-id-CHE" secondAttribute="top" id="54B-Km-uUz"/>
                                         <constraint firstItem="AS3-6t-fu2" firstAttribute="top" secondItem="oGS-f4-LWp" secondAttribute="top" constant="10" id="99Y-84-VsN"/>
                                         <constraint firstAttribute="trailing" secondItem="hDx-HH-tdx" secondAttribute="trailing" constant="20" id="AcP-SB-J8Z"/>
                                         <constraint firstAttribute="trailing" secondItem="M1Y-b1-1XL" secondAttribute="trailing" id="Ejr-GB-sK0"/>
                                         <constraint firstItem="xUo-id-CHE" firstAttribute="leading" secondItem="Y3t-mB-0q5" secondAttribute="leading" constant="5" id="GQC-1d-E0c"/>
                                         <constraint firstItem="M1Y-b1-1XL" firstAttribute="top" secondItem="Q5v-hg-yfp" secondAttribute="bottom" constant="10" id="Hvk-ic-p3I"/>
-                                        <constraint firstItem="Q5v-hg-yfp" firstAttribute="top" secondItem="Y3t-mB-0q5" secondAttribute="bottom" constant="10" id="L84-6k-zzk"/>
+                                        <constraint firstItem="Q5v-hg-yfp" firstAttribute="top" secondItem="Y3t-mB-0q5" secondAttribute="bottom" constant="50" id="L84-6k-zzk"/>
+                                        <constraint firstItem="xUo-id-CHE" firstAttribute="leading" secondItem="Y3t-mB-0q5" secondAttribute="trailing" constant="-403" id="NvK-aN-tkF"/>
+                                        <constraint firstItem="xUo-id-CHE" firstAttribute="top" secondItem="hDx-HH-tdx" secondAttribute="bottom" constant="-8.5" id="OFr-UM-MmY"/>
                                         <constraint firstAttribute="trailing" secondItem="Q5v-hg-yfp" secondAttribute="trailing" constant="3" id="PDZ-Ip-Qlc"/>
-                                        <constraint firstItem="Y3t-mB-0q5" firstAttribute="top" secondItem="AS3-6t-fu2" secondAttribute="bottom" constant="10" id="PXx-6h-FlS"/>
                                         <constraint firstAttribute="trailing" secondItem="Y3t-mB-0q5" secondAttribute="trailing" constant="3" id="Qxf-ZM-gtL"/>
                                         <constraint firstItem="AS3-6t-fu2" firstAttribute="leading" secondItem="oGS-f4-LWp" secondAttribute="leading" constant="10" id="REK-R2-nre"/>
                                         <constraint firstItem="Q5v-hg-yfp" firstAttribute="leading" secondItem="oGS-f4-LWp" secondAttribute="leading" constant="3" id="Rhw-P4-y8G"/>
                                         <constraint firstAttribute="bottom" secondItem="M1Y-b1-1XL" secondAttribute="bottom" constant="10" id="SMO-gT-Vwb"/>
-                                        <constraint firstItem="xUo-id-CHE" firstAttribute="top" secondItem="Y3t-mB-0q5" secondAttribute="bottom" constant="-15" id="T5B-gm-uq2"/>
-                                        <constraint firstItem="Y3t-mB-0q5" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xUo-id-CHE" secondAttribute="trailing" constant="-100" id="aeR-56-CtR"/>
+                                        <constraint firstItem="Q5v-hg-yfp" firstAttribute="leading" secondItem="Y3t-mB-0q5" secondAttribute="trailing" constant="-408" id="V7t-ii-7dN"/>
+                                        <constraint firstItem="Y3t-mB-0q5" firstAttribute="centerY" secondItem="hDx-HH-tdx" secondAttribute="centerY" id="Z0j-4o-FuO"/>
                                         <constraint firstItem="Y3t-mB-0q5" firstAttribute="leading" secondItem="oGS-f4-LWp" secondAttribute="leading" constant="3" id="cX4-vU-mgY"/>
                                         <constraint firstItem="M1Y-b1-1XL" firstAttribute="leading" secondItem="oGS-f4-LWp" secondAttribute="leading" id="f5L-Ia-ReG"/>
                                         <constraint firstItem="hDx-HH-tdx" firstAttribute="bottom" secondItem="AS3-6t-fu2" secondAttribute="bottom" constant="3" id="gIm-Uz-r4r"/>
                                         <constraint firstAttribute="trailing" secondItem="sMe-Kv-Nh9" secondAttribute="trailing" constant="20" id="gis-zG-PmW"/>
+                                        <constraint firstItem="Q5v-hg-yfp" firstAttribute="top" secondItem="oGS-f4-LWp" secondAttribute="top" constant="105" id="t3v-yz-cCH"/>
                                         <constraint firstItem="sMe-Kv-Nh9" firstAttribute="leading" secondItem="AS3-6t-fu2" secondAttribute="trailing" constant="20" id="tSH-vA-mAD"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -700,7 +704,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoCell" id="GQv-lO-cqw" customClass="NewsTableViewCell" customModule="Client_VK" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="563" width="414" height="538.5"/>
+                                <rect key="frame" x="0.0" y="588" width="414" height="538.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GQv-lO-cqw" id="pQu-f7-2Fh">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="538.5"/>
